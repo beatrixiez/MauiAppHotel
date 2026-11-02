@@ -9,10 +9,10 @@
 
         protected override Window CreateWindow(IActivationState? activationState)
         {
-            var window = new Window(new AppShell())
+            var window = new Window(new Views.ContratacaoHospedagem())
             {
                 Width = 400,
-                Height = 600
+                Height = 700
             };
 
             return window;
