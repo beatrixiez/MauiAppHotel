@@ -14,46 +14,130 @@
                FontSize="50"
                HorizontalTextAlignment="Center"/>
 
-        <Frame Margin="10">
+        <Frame Margin="10"
+               BackgroundColor="{StaticResource White}">
             <HorizontalStackLayout>
                 <HorizontalStackLayout>
-                    <Label Text="Adultos: " />
-                    <Label Text="2"
+                    <Label Text="Adultos:"
+                           TextColor="{StaticResource Gray900}"/>
+                </HorizontalStackLayout>
+                <HorizontalStackLayout>
+                <Label Text=" 2"
                            TextColor="{StaticResource Primary}"/>
                 </HorizontalStackLayout>
 
                 <HorizontalStackLayout>
-                    <Label Text="Crianças: " />
-                    <Label Text="1"
-           TextColor="{StaticResource Primary}"/>
+                    <Label Text=" Crianças:"
+                           TextColor="{StaticResource Gray900}"/>
+                    <Label Text=" 1"
+                           TextColor="{StaticResource Primary}"/>
                 </HorizontalStackLayout>
             </HorizontalStackLayout>
         </Frame>
 
-        <Frame Margin="10">
+        <Frame Margin="10"
+               BackgroundColor="{StaticResource White}">
             <Grid ColumnDefinitions="*, *, *"
                   RowDefinitions="Auto, Auto">
-                <Label Grid.Row="0" Grid.Column="0" Text="Check-In: " />
-                <Label Grid.Row="0" Grid.Column="1" Text="Check-Out: " />
-                <Label Grid.Row="0" Grid.Column="2" Text="Estadia: " />
+                <Label Grid.Row="0" Grid.Column="0" Text="Check-In: " TextColor="{StaticResource Gray900}"/>
+                <Label Grid.Row="0" Grid.Column="1" Text="Check-Out: " TextColor="{StaticResource Gray900}"/>
+                <Label Grid.Row="0" Grid.Column="2" Text="Estadia: " TextColor="{StaticResource Gray900}"/>
 
-                <Label Grid.Row="1" Grid.Column="0" Text="16/11/2026" />
-                <Label Grid.Row="1" Grid.Column="1" Text="04/12/2026" />
-                <Label Grid.Row="1" Grid.Column="2" Text="18" />
+                <Label Grid.Row="1" Grid.Column="0" Text="16/11/2026" TextColor="{StaticResource Primary}"/>
+                <Label Grid.Row="1" Grid.Column="1" Text="23/11/2026" TextColor="{StaticResource Primary}"/>
+                <Label Grid.Row="1" Grid.Column="2" Text="8 dias" TextColor="{StaticResource Primary}"/>
             </Grid>
         </Frame>
 
-        <Frame Margin="10">
-            <HorizontalStackLayout>
-                <Label Text="Valor Total: " />
-                <Label Text="R$ 2.458,85 reais" />
-            </HorizontalStackLayout>
+        <!-- Cartão de Pacotes e Valores -->
+        <Frame Margin="10"
+               Padding="20"
+               BackgroundColor="{StaticResource White}">
+
+            <VerticalStackLayout Spacing="15">
+
+                <Label Text="Opções de Estadia" 
+                       Padding="0, 10"
+                       FontFamily="ZenLoopRegular" 
+                       FontSize="25" 
+                       TextColor="{StaticResource Primary}" />
+
+                <Grid ColumnDefinitions="Auto, *, Auto"
+                      VerticalOptions="Center">
+                    
+                    <RadioButton Grid.Column="0"
+                                 GroupName="Pacotes" />
+
+                    <VerticalStackLayout Grid.Column="1"
+                                         Margin="10,0,0,0"
+                                         VerticalOptions="Center">
+                        <Label Text="Apenas Hospedagem"
+                               TextColor="{StaticResource Gray900}"/>
+                        <Label Text="Sem refeições inclusas"
+                               FontSize="12"
+                               TextColor="{StaticResource Gray500}"/>
+                    </VerticalStackLayout>
+
+                    <Label Grid.Column="2"
+                           Text="R$ 2.458,85"
+                           TextColor="{StaticResource Primary}"
+                           VerticalOptions="Center"/>
+                </Grid>
+
+                <Grid ColumnDefinitions="Auto, *, Auto"
+                      VerticalOptions="Center">
+                    
+                    <RadioButton Grid.Column="0"
+                                 IsChecked="True"
+                                 GroupName="Pacotes" />
+
+                    <VerticalStackLayout Grid.Column="1"
+                                         Margin="10,0,0,0"
+                                         VerticalOptions="Center">
+                        <Label Text="Hospedagem + Café"
+                               TextColor="{StaticResource Gray900}"/>
+                        <Label Text="Buffet completo incluso"
+                               FontSize="12"
+                               TextColor="{StaticResource Gray500}"/>
+                    </VerticalStackLayout>
+
+                    <Label Grid.Column="2"
+                           Text="R$ 2.650,00"
+                           TextColor="{StaticResource Primary}"
+                           VerticalOptions="Center"/>
+                </Grid>
+
+                <Grid ColumnDefinitions="Auto, *, Auto"
+                      VerticalOptions="Center">
+                    
+                    <RadioButton Grid.Column="0"
+                                 GroupName="Pacotes" />
+
+                    <VerticalStackLayout Grid.Column="1"
+                                         Margin="10,0,0,0"
+                                         VerticalOptions="Center">
+                        <Label Text="Pacote Premium"
+                               TextColor="{StaticResource Gray900}"/>
+                        <Label Text="Café, Spa e Estacionamento"
+                               FontSize="12"
+                               TextColor="{StaticResource Gray500}"/>
+                    </VerticalStackLayout>
+
+                    <Label Grid.Column="2"
+                           Text="R$ 3.120,50"
+                           TextColor="{StaticResource Primary}"
+                           VerticalOptions="Center"/>
+                </Grid>
+
+            </VerticalStackLayout>
         </Frame>
 
         <Button Text="Voltar"
-                HorizontalOptions="Center"
+                HorizontalOptions="Fill"
+                Margin="20,0,20,25"
+                TextColor="{StaticResource SecondaryDarkText}"
+                BackgroundColor="{StaticResource Secondary}"
                 Clicked="Button_Clicked" />
-
     </VerticalStackLayout>
     
 </ContentPage>
