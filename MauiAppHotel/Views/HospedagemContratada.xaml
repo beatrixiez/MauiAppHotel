@@ -49,7 +49,6 @@
             </Grid>
         </Frame>
 
-        <!-- Cartão de Pacotes e Valores -->
         <Frame Margin="10"
                Padding="20"
                BackgroundColor="{StaticResource White}">
