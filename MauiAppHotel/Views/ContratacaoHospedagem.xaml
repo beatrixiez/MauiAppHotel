@@ -71,6 +71,7 @@
 
                     <Picker x:Name="pck_quarto"
                             Title="Selecione a acomodação:"
+                            ItemDisplayBinding="{Binding Descricao}"
                             TextColor="{StaticResource Gray900}"
                             TitleColor="{StaticResource Gray500}"
                             BackgroundColor="{StaticResource Gray400}"/>
@@ -93,6 +94,7 @@
                                        TextColor="{StaticResource Gray900}"
                                        VerticalOptions="Center"/>
                                 <DatePicker x:Name="dtpck_checkin"
+                                            DateSelected="dtpck_checkin_DateSelected"
                                             Format="dd/MM/yyyy"
                                             TextColor="{StaticResource Primary}"
                                             VerticalOptions="Center"/>
@@ -113,7 +115,8 @@
 
                     <Button Text="Avançar"
                             TextColor="{StaticResource SecondaryDarkText}"
-                            BackgroundColor="{StaticResource Secondary}"/>
+                            BackgroundColor="{StaticResource Secondary}"
+                            Clicked="Button_Clicked"/>
 
                 </VerticalStackLayout>
             </Frame>
