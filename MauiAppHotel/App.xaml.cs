@@ -9,7 +9,7 @@
 
         protected override Window CreateWindow(IActivationState? activationState)
         {
-            var window = new Window(new Views.ContratacaoHospedagem())
+            var window = new Window(new NavigationPage(new Views.ContratacaoHospedagem()))
             {
                 Width = 400,
                 Height = 700
